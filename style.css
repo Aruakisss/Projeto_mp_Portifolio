@@ -1,0 +1,256 @@
+body{
+    /*fazendo isso eu removo as margens pra não ficar espaços em branco, e adicionei fontes para o meu site para caso o dispositivo que esteja acessando consiga lê-lo */
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    /*aqui ja temos os primeiros estilos aplicados */
+    background: #f4f4f4;
+    color: #333;
+}
+*{
+    box-sizing:border-box;
+}
+
+header{
+    /*aqui eu estilizei o header, que é a parte de cima do site, onde fica o menu de navegação */
+    background: #222;
+    padding:20px;
+    text-align:center;
+}
+
+nav a{
+
+    margin:0 10px;
+    /* inline-block para sempre ficar um lado a lado independente do tamanho que  agnete coloque no dispositivo, com a ajuda do center e o gap para 'polir'*/
+    display:inline-block;
+    gap: 30px;
+    justify-content:center;
+}
+
+nav a{
+    /*aqui eu estilizei os links do menu de navegação, que são os links que levam para as outras páginas do site */
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+nav a:hover{
+    /* o hover serve para alterar o estilo do link quando o usuário passa o mouse sobre ele */
+    color:#00bfff;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu{
+    display:flex;
+    gap: 30px;
+}
+
+.container{
+    /*aqui eu estilizei o container, que é a parte principal do site, onde fica o conteúdo principal */
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.foto{
+    /*aqui eu estilizei a foto, que é a imagem do usuário */
+    width:100px;
+    display:block;
+    margin:20px auto;
+    border-radius: 50%;
+}
+
+.hero{
+    /*aqui eu estilizei a seção hero, que é a parte principal do site, onde fica o conteúdo principal */
+    text-align:center;
+    padding:60px 20px;
+}
+
+.botao{
+    /*aqui eu estilizei o botão, que é o link que leva para a página de projetos */
+    display:inline-block;
+    margin-top:20px;
+    background:#0077cc;
+    color:white;
+    padding:12px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    transition: .3s;
+}
+.botao:hover{
+    /*aqui eu estilizei o botão quando o usuário passa o mouse sobre ele */
+    background:#005fa3;
+}
+
+footer{
+    /*aqui eu estilizei o footer, que é a parte de baixo do site, onde fica o rodapé */
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+.card{
+    /*aqui eu estilizei o card, que é a parte que fica os projetos */
+    background:white;
+    padding:20px;
+    margin:20px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+form{
+    /*aqui eu estilizei o formulário, que é a parte que fica o formulário de contato */
+    display:flex;
+    flex-direction:column;
+}
+label{
+    /*aqui eu estilizei os labels, que são os textos que ficam acima dos campos do formulário */
+    margin:15px;
+    font-weight:bold;
+}
+
+.campo{
+    /*aqui eu estilizei os campos, que são os campos do formulário */
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+
+/* Estilos para dispositivos móveis */
+/* Estilos para dispositivos móveis */
+@media (max-width:768px){
+    /*aqui eu estilizei o site para quando o usuário estiver acessando o site em um dispositivo com tela menor que 768px */
+    nav a{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+@media (max-width:768px){
+    /* Estilos para dispositivos móveis barra de navegação */
+    nav{
+        flex-direction:column;
+    }
+    .menu{
+        margin-top:20px;
+        flex-direction:column;
+        align-items:center;
+    }
+}
+
+@media(max-width:768px){
+    /* Estilos para dispositivos móveis foto */
+  .foto{
+    width:150px;
+  }
+}
+
+@media (max-width:768px){
+    /* Estilos para dispositivos móveis titulo*/
+    h1{
+        font-size:32px;
+    }
+}
+
+@media (max-width:768px){
+    /* Estilos para dispositivos móveis */
+    .botao{
+        width:100%;
+        box-sizing:border-box;
+        text-align:center;
+    }
+}
+
+@media (max-width:768px){
+    /* Estilos para dispositivos móveis */
+    .card{
+        margin: 15px 0;
+    }
+}
+
+@media (max-width:768px){
+    /* Estilos para dispositivos móveis */
+    .campo{
+        font-size:14px;
+    }
+}
+/* Botão para voltar ao topo */
+.topo-btn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 50px;
+height: 50px;
+border: none;
+border-radius: 50%;
+background: #0077cc;
+color: white;
+font-size: 24px;
+cursor: pointer;
+display: block;
+box-shadow: 0 4px 10px rgba(0,0,0,.2);
+transition: .3s;
+}
+
+
+.tema-btn {
+background: none;
+border: 2px solid white;
+color: white;
+padding: 8px 12px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 18px;
+}
+
+body.dark {
+background: #121212;
+color: #f1f1f1;
+}
+
+body.dark .card,
+body.dark section {
+background: #1e1e1e;
+color: #f1f1f1;
+}
+
+.minhaJornada {
+    width: 600%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.quemSouEu {
+    width: 600%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.objetivos {
+    width: 600%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.skills {
+    width: 600%;
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
